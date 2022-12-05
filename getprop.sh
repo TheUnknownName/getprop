@@ -3,7 +3,7 @@
 function error {
 echo "
 ############################################
-                getprop v1.0.0
+                getprop v1.1.1
 ############################################
 how to use
 $0 [type] [input file] [prop name] [value]
@@ -38,7 +38,7 @@ error
 fi
 
 flag_id="$(grep "$varName" $file | cut -d "=" -f1)"
-flag_value=""$(grep "$varName" $file | cut -d "=" -f2)"
+flag_value="$(grep "$varName" $file | cut -d "=" -f2)"
 echo "flag: $flag_id"
 echo "----------------------------------"
 echo "VALUE!!!"
@@ -61,7 +61,7 @@ error
 fi
 
 flag_id="$(grep "$varName" $file | cut -d "=" -f1)"
-flag_value=""$(grep "$varName" $file | cut -d "=" -f2)"
+flag_value="$(grep "$varName" $file | cut -d "=" -f2)"
 echo "$flag_value"
 }
 
